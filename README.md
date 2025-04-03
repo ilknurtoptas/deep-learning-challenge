@@ -64,6 +64,7 @@ The deep learning model was built using **Keras Sequential API**:
 - **Metrics**: `accuracy`
 
 ReLU is a standard choice ... Sigmoid is ideal for binary outcomes.
+
 ---
 
 ## 📊 Model Performance : Were you able to achieve the target model performance?
