@@ -1,6 +1,6 @@
-# 📊 Alphabet Soup Charity — Neural Network Model
+# Alphabet Soup Charity — Neural Network Model
 
-## 🔍 Overview
+## Overview
 
 This project was developed to support **Alphabet Soup**, a nonprofit foundation, in making data-driven decisions when selecting applicants for funding. Using a deep learning neural network, we aimed to build a binary classifier that predicts whether an applicant will be successful if funded.
 
@@ -8,7 +8,7 @@ By analyzing historical data from over **34,000 funded organizations**, the mode
 
 ---
 
-## 🧠 Objective
+## Objective
 
 Create a binary classification model using TensorFlow/Keras that can:
 
@@ -17,14 +17,14 @@ Create a binary classification model using TensorFlow/Keras that can:
 
 ---
 
-## 🗂 Dataset Details
+## Dataset Details
 
 The dataset includes categorical and numerical data describing organizations, their application types, funding requests, and success outcomes.
 
-### 🎯 Target Variable: What variable(s) are the target(s) for your model?
+### Target Variable: What variable(s) are the target(s) for your model?
 - `IS_SUCCESSFUL`: Binary flag indicating if the funding resulted in a successful outcome (1 = Yes, 0 = No)
 
-### 🔍 Features Used: What variable(s) are the features for your model?
+### Features Used: What variable(s) are the features for your model?
 - `APPLICATION_TYPE`
 - `AFFILIATION`
 - `CLASSIFICATION`
@@ -35,12 +35,12 @@ The dataset includes categorical and numerical data describing organizations, th
 - `SPECIAL_CONSIDERATIONS`
 - `ASK_AMT`
 
-### 🧹 Features Removed: What variable(s) should be removed from the input data because they are neither targets nor features?
+### Features Removed: What variable(s) should be removed from the input data because they are neither targets nor features?
 - `EIN`, `NAME`: These are unique identifiers and irrelevant for prediction, thus dropped early.
 
 ---
 
-## 🧪 Data Preprocessing
+## Data Preprocessing
 
 - One-hot encoding was used for all categorical variables.
 - Numerical features were normalized using `StandardScaler`.
@@ -48,7 +48,7 @@ The dataset includes categorical and numerical data describing organizations, th
 
 ---
 
-## 🏗 Model Architecture : How many neurons, layers, and activation functions did you select for your neural network model, and why?
+## Model Architecture : How many neurons, layers, and activation functions did you select for your neural network model, and why?
 
 The deep learning model was built using **Keras Sequential API**:
 
@@ -58,7 +58,7 @@ The deep learning model was built using **Keras Sequential API**:
 | Hidden Layer 2| 30      | ReLU       |
 | Output Layer  | 1       | Sigmoid    |
 
-### ⚙️ Compilation
+### Compilation
 - **Loss Function**: `binary_crossentropy`
 - **Optimizer**: `adam`
 - **Metrics**: `accuracy`
@@ -67,7 +67,7 @@ ReLU is a standard choice ... Sigmoid is ideal for binary outcomes.
 
 ---
 
-## 📊 Model Performance : Were you able to achieve the target model performance?
+## Model Performance : Were you able to achieve the target model performance?
 
 - **Final Accuracy**: ~72.8%
 - **Target Accuracy**: 75%
@@ -76,7 +76,7 @@ Although the model performed reasonably well, it fell slightly short of the perf
 
 ---
 
-## 🔧 Optimization Attempts : What steps did you take in your attempts to increase model performance?
+## Optimization Attempts : What steps did you take in your attempts to increase model performance?
 
 Several experiments were conducted to enhance performance:
 
@@ -87,22 +87,22 @@ Several experiments were conducted to enhance performance:
 - Hyperparameter tuning (e.g., learning rate, batch size)
 
 ---
-## 💡 Recommendations & Next Steps
+## Recommendations & Next Steps
 
 While the current deep learning model provided promising results, alternative models could potentially outperform it:
 
-### ✅ Try Other Algorithms:
+### Try Other Algorithms:
 - **XGBoost or Random Forests**: Better suited for categorical data and high-dimensional features.
 - **Logistic Regression (as baseline)**: Simpler model to compare performance.
 - **AutoML Tools**: Automate feature selection and model optimization.
 
-### ✅ Enhanced Feature Engineering:
+### Enhanced Feature Engineering:
 - Log-transform skewed features (e.g., `ASK_AMT`)
 - Group rare categories
 - Encode ordinal relationships where applicable
 
 ---
-## 🚀 Conclusion
+## Conclusion
 This project demonstrates how neural networks can be applied to nonprofit funding strategies. While the model was not perfect, it lays the groundwork for more advanced predictive tools that can support mission-driven decision-making.
 
 ## 📁 Project Files
